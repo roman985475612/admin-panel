@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "gulp build --dev",
+        "dev": "gulp dev --dev",
         "prod": "gulp build"
     },
     "keywords": [],

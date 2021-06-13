@@ -7,6 +7,7 @@ const sourcemaps   = require('gulp-sourcemaps')
 const browserSync  = require('browser-sync').create()
 const gulpIf       = require('gulp-if')
 const uglify       = require('gulp-uglifyjs')
+const webp         = require('gulp-webp')
 
 let isDev  = process.argv.includes('--dev')
 let isProd = !isDev
@@ -41,14 +42,22 @@ function scripts() {
             './src/js/**/*.js'
         ])
         .pipe(concat('main.min.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('./build/js'))
         .pipe(browserSync.stream())
 }
 
 function image() {
-    return gulp.src('./src/img/**/*')
-               .pipe(gulp.dest('./build/img'))
+    return gulp
+            .src('./src/img/**/*')
+            .pipe(gulp.dest('./build/img'))
+}
+
+function imageToWebp() {
+    return gulp
+            .src('./src/img/**/*')
+            .pipe(webp())
+            .pipe(gulp.dest('./build/img'))
 }
 
 function mStyle() {
@@ -67,7 +76,7 @@ function watch() {
     gulp.watch('./src/js/**/*.js', scripts)
 }
 
-let build = gulp.parallel(html, style, scripts, image, mStyle)
+let build = gulp.parallel(html, style, scripts, image, imageToWebp, mStyle)
 let buildWithClean = gulp.series(clean, build)
 let dev = gulp.series(buildWithClean, watch)
 

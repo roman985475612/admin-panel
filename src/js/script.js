@@ -52,6 +52,11 @@ setTimeout(function() {
             $(this).parent().remove()
             M.toast({html: 'Todo Removed'}) 
         } )
+
+        // Submit Post form
+        $( '.section-details .card-action .btn.green' ).on( 'click', function () {
+            $( '.section-details form' ).submit()
+        } )
     })
     
 }, 1000)

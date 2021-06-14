@@ -1,5 +1,27 @@
+.card-title {
+    text-transform: capitalize;
+}
+
 .loader {
     position: absolute;
     top: 40%;
     left: 47%;
+}
+
+.section-comments .card-content img,
+.section-details .card-content img {
+    margin-left: 10px;
+    width: 40px;
+}
+
+.section-login {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.section-login .btn-extended {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
 }

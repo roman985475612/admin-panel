@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Madmin | Details</title>
+</head>
+<body class="grey lighten-4">
+    <nav class="blue darken-2">
+        <div class="container">
+            <a href="index.html" class="brand-logo">Madmin</a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large right">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="posts.html">Posts</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="comments.html">Comments</a></li>
+                <li><a href="users.html">Users</a></li>
+            </ul>
+
+            <!-- side nav -->
+            <ul id="slide-out" class="sidenav">
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <picture>
+                                <source srcset="img/ocean.webp" type="image/webp">
+                                <img src="img/ocean.jpg" alt="person">
+                            </picture>
+                        </div>
+                        <a href="#user">
+                            <picture>
+                                <source srcset="img/person1.webp" type="image/webp">
+                                <img class="circle" src="img/person1.jpg" alt="person">
+                            </picture>
+                        </a>
+                        <a href="#name"><span class="white-text name">John Doe</span></a>
+                        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                    </div>
+                </li>
+                <li><a href="index.html"><i class="material-icons">dashboard</i> Dashboard</a></li>
+                <li><a href="posts.html">Posts</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="comments.html">Comments</a></li>
+                <li><a href="users.html">Users</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Account Controls</a></li>
+                <li><a class="waves-effect" href="login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section section-details grey lighten-4">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col s12 m6">
+                                    <span class="card-title">post details</span>
+                                </div>
+                                <div class="col s12 m6 center">
+                                    <picture>
+                                        <source srcset="img/person1.webp" type="image/webp">
+                                        <img 
+                                            src="img/person1.jpg" 
+                                            alt="John Doe"
+                                            class="responsive-img circle"
+                                        >
+                                    </picture>
+                                    <p>Posted by John Doe</p>
+                                    <time datetime="2020-11-18">On Nov 18, 2020</time>
+                                </div>
+                            </div>
+
+                            <form action="posts.html">
+                                <div class="input-field">
+                                    <input type="text" id="title" value="Post One">
+                                    <label for="title">Title</label>
+                                </div>
+                                <div class="input-field">
+                                    <select>
+                                        <option value="" disabled>Select option</option>
+                                        <option value="1" selected>Web Development</option>
+                                        <option value="2">Graphic Design</option>
+                                        <option value="3">Tech Gadgets</option>
+                                        <option value="4">Other</option>
+                                    </select>
+                                    <label>Category</label>
+                                </div>
+                                <div class="input-field">
+                                    <textarea name="body" id="body" class="materialize-textarea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit autem sed distinctio dolor voluptate ab quibusdam rerum labore, at qui maxime voluptates totam in repellendus.</textarea>
+                                    <label for="body"></label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-action">
+                            <button class="btn green">Save</button>
+                            <button class="btn red">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /.section section-details grey lighten-4 -->
+
+    <footer class="section blue darken-2 white-text center">
+        <p>Madmin panel Copyright &copy; 2021</p>
+    </footer>
+    <!-- /.section blue darken-2 white-text center -->
+
+    <div class="loader preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
+    <script type="text/javascript" src="js/main.min.js"></script>
+</body>
+</html>
